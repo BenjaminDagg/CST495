@@ -81,12 +81,13 @@ class ImageFilterViewController: UIViewController {
         }
         //add scrolview container view to the scrollview
         scrollView.addSubview(containerView)
-        
+        scrollView.translatesAutoresizingMaskIntoConstraints = true
         //add scrollView to UIViewController
         view.addSubview(scrollView)
         
-        
-        
+        //***** scrollview constraints ******
+        let scrollViewTopAnchor = scrollView.topAnchor.constraint(equalTo: (imageView?.bottomAnchor)!, constant: 50)
+        scrollViewTopAnchor.isActive = true
         
     }
     
