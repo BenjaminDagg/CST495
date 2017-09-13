@@ -1,14 +1,69 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A264c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xQv-Ro-Jl0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Image View Controller-->
+        <scene sceneID="8zq-oz-23N">
+            <objects>
+                <viewController id="7Si-Td-jsQ" userLabel="Image View Controller" customClass="ImageFilterViewController" customModule="Demo1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bML-q6-rFr"/>
+                        <viewControllerLayoutGuide type="bottom" id="bzx-Rp-CJd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dSi-b0-4mz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWx-Za-PXm">
+                                <rect key="frame" x="102" y="28" width="170" height="36"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
+                                <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beach" translatesAutoresizingMaskIntoConstraints="NO" id="S8g-pZ-fCR">
+                                <rect key="frame" x="49.5" y="122" width="275" height="183"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eF5-EU-vgQ">
+                                <rect key="frame" x="67" y="325" width="240" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="581-TZ-ssw"/>
+                                    <constraint firstAttribute="width" constant="240" id="U6U-Uh-mT9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eF5-EU-vgQ" firstAttribute="centerX" secondItem="dSi-b0-4mz" secondAttribute="centerX" id="6DV-2f-sXq"/>
+                            <constraint firstItem="S8g-pZ-fCR" firstAttribute="centerX" secondItem="dSi-b0-4mz" secondAttribute="centerX" id="DAr-jU-G6h"/>
+                            <constraint firstItem="CWx-Za-PXm" firstAttribute="centerX" secondItem="dSi-b0-4mz" secondAttribute="centerX" id="KNl-KY-3Vm"/>
+                            <constraint firstItem="eF5-EU-vgQ" firstAttribute="top" secondItem="S8g-pZ-fCR" secondAttribute="bottom" constant="20" id="QTw-gh-VfQ"/>
+                            <constraint firstItem="bzx-Rp-CJd" firstAttribute="top" secondItem="eF5-EU-vgQ" secondAttribute="bottom" id="aqb-bX-jEX"/>
+                            <constraint firstItem="S8g-pZ-fCR" firstAttribute="top" secondItem="CWx-Za-PXm" secondAttribute="bottom" constant="58" id="fpl-R6-pgJ"/>
+                            <constraint firstItem="S8g-pZ-fCR" firstAttribute="top" secondItem="CWx-Za-PXm" secondAttribute="bottom" constant="58" id="oUA-Cs-RPB"/>
+                            <constraint firstItem="CWx-Za-PXm" firstAttribute="top" secondItem="bML-q6-rFr" secondAttribute="bottom" constant="8" id="vVS-wg-tWc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Image Filters" image="camera-7" id="hDY-cD-egU"/>
+                    <connections>
+                        <outlet property="imageView" destination="S8g-pZ-fCR" id="X3H-un-3Cw"/>
+                        <outlet property="scrollView" destination="eF5-EU-vgQ" id="QGm-FA-rkL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hW-10-bfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="-542.87856071964018"/>
+        </scene>
+        <!--Binary View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Binary View Controller" customClass="ViewController" customModule="Demo1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +71,97 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Binary Converter" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfm-Z8-Ml1">
+                                <rect key="frame" x="76" y="28" width="222" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.2244015191040335" blue="0.13568307306672389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZz-8m-Zdw">
+                                <rect key="frame" x="134" y="260" width="106" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convertWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AmQ-Wm-0JU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vms-vb-jcn">
+                                <rect key="frame" x="146" y="422" width="83" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Binary Value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ids-Zs-1gS">
+                                <rect key="frame" x="63" y="136" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="U6M-G5-gre"/>
+                                    <constraint firstAttribute="height" constant="50" id="Vpk-rG-cpc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VaQ-0S-ske"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vms-vb-jcn" firstAttribute="top" secondItem="XZz-8m-Zdw" secondAttribute="bottom" constant="114" id="9gE-4I-BFd"/>
+                            <constraint firstItem="XZz-8m-Zdw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C6T-Qx-z2W"/>
+                            <constraint firstItem="dfm-Z8-Ml1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lzy-67-BIS"/>
+                            <constraint firstItem="ids-Zs-1gS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M7r-EU-TDl"/>
+                            <constraint firstItem="dfm-Z8-Ml1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="eeh-rJ-txR"/>
+                            <constraint firstItem="vms-vb-jcn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oPa-Hp-D7D"/>
+                            <constraint firstItem="XZz-8m-Zdw" firstAttribute="top" secondItem="ids-Zs-1gS" secondAttribute="bottom" constant="74" id="qKv-wD-vi9"/>
+                            <constraint firstItem="ids-Zs-1gS" firstAttribute="top" secondItem="dfm-Z8-Ml1" secondAttribute="bottom" constant="72" id="rw1-Rp-ijT"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hic-aa-Dey" appends="YES" id="j5c-i5-aMv"/>
+                        </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Binary Converter" image="connect-arrow-left-right-7" id="F0n-ga-tnO"/>
+                    <connections>
+                        <outlet property="binaryConvererLabel" destination="dfm-Z8-Ml1" id="PtU-be-xeY"/>
+                        <outlet property="convertButton" destination="XZz-8m-Zdw" id="XFM-tq-fD3"/>
+                        <outlet property="resultLabel" destination="vms-vb-jcn" id="DvG-tp-DJL"/>
+                        <outlet property="textField" destination="ids-Zs-1gS" id="cX0-H9-41K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hic-aa-Dey">
+                    <connections>
+                        <action selector="dismissKeyboardWith_sender:" destination="BYZ-38-t0r" id="aEM-g4-jBm"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="3874.4000000000001" y="122.78860569715144"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="E9Z-rU-Ug2">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xQv-Ro-Jl0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qvx-z7-OGA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="m1u-my-jpn"/>
+                        <segue destination="7Si-Td-jsQ" kind="relationship" relationship="viewControllers" id="S15-eC-fAs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ez-j5-BU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2935.1999999999998" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="beach" width="275" height="183"/>
+        <image name="camera-7" width="30" height="30"/>
+        <image name="connect-arrow-left-right-7" width="29" height="30"/>
+    </resources>
 </document>
