@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B81CFD71F8B490000A7A5CC /* Crime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81CFD61F8B490000A7A5CC /* Crime.swift */; };
+		5B81CFDC1F8CA46900A7A5CC /* CrimeInfoTransferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81CFDB1F8CA46900A7A5CC /* CrimeInfoTransferDelegate.swift */; };
+		5B81CFDE1F8CA72B00A7A5CC /* CrimeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81CFDD1F8CA72B00A7A5CC /* CrimeListTableViewController.swift */; };
+		5B81CFE01F8CAE2D00A7A5CC /* CrimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81CFDF1F8CAE2D00A7A5CC /* CrimeCell.swift */; };
+		5B81CFE21F8EA2F400A7A5CC /* CrimeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81CFE11F8EA2F400A7A5CC /* CrimeDetailsVC.swift */; };
 		5BCA1F4E1F829F1800B2605F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCA1F4D1F829F1800B2605F /* AppDelegate.swift */; };
 		5BCA1F501F829F1800B2605F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCA1F4F1F829F1800B2605F /* ViewController.swift */; };
 		5BCA1F531F829F1800B2605F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCA1F511F829F1800B2605F /* Main.storyboard */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B81CFD61F8B490000A7A5CC /* Crime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crime.swift; sourceTree = "<group>"; };
+		5B81CFDB1F8CA46900A7A5CC /* CrimeInfoTransferDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeInfoTransferDelegate.swift; sourceTree = "<group>"; };
+		5B81CFDD1F8CA72B00A7A5CC /* CrimeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeListTableViewController.swift; sourceTree = "<group>"; };
+		5B81CFDF1F8CAE2D00A7A5CC /* CrimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeCell.swift; sourceTree = "<group>"; };
+		5B81CFE11F8EA2F400A7A5CC /* CrimeDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeDetailsVC.swift; sourceTree = "<group>"; };
 		5BCA1F4A1F829F1800B2605F /* Challenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCA1F4D1F829F1800B2605F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BCA1F4F1F829F1800B2605F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +113,11 @@
 				5BCA1F541F829F1800B2605F /* Assets.xcassets */,
 				5BCA1F561F829F1800B2605F /* LaunchScreen.storyboard */,
 				5BCA1F591F829F1800B2605F /* Info.plist */,
+				5B81CFD61F8B490000A7A5CC /* Crime.swift */,
+				5B81CFDB1F8CA46900A7A5CC /* CrimeInfoTransferDelegate.swift */,
+				5B81CFDD1F8CA72B00A7A5CC /* CrimeListTableViewController.swift */,
+				5B81CFDF1F8CAE2D00A7A5CC /* CrimeCell.swift */,
+				5B81CFE11F8EA2F400A7A5CC /* CrimeDetailsVC.swift */,
 			);
 			path = Challenge3;
 			sourceTree = "<group>";
@@ -259,7 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B81CFE01F8CAE2D00A7A5CC /* CrimeCell.swift in Sources */,
+				5B81CFDE1F8CA72B00A7A5CC /* CrimeListTableViewController.swift in Sources */,
 				5BCA1F501F829F1800B2605F /* ViewController.swift in Sources */,
+				5B81CFD71F8B490000A7A5CC /* Crime.swift in Sources */,
+				5B81CFE21F8EA2F400A7A5CC /* CrimeDetailsVC.swift in Sources */,
+				5B81CFDC1F8CA46900A7A5CC /* CrimeInfoTransferDelegate.swift in Sources */,
 				5BCA1F4E1F829F1800B2605F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +527,7 @@
 				5BCA1F741F829F1800B2605F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BCA1F751F829F1800B2605F /* Build configuration list for PBXNativeTarget "Challenge3Tests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +536,7 @@
 				5BCA1F771F829F1800B2605F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BCA1F781F829F1800B2605F /* Build configuration list for PBXNativeTarget "Challenge3UITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +545,7 @@
 				5BCA1F7A1F829F1800B2605F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
